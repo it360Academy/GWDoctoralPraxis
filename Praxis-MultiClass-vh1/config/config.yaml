@@ -1,0 +1,112 @@
+# H1-MultiClass configuration - NIS 2021-2023, ICD-10-CM
+#
+# H1: Within a leakage-controlled, cross-year-replicated supervised
+# multiclass framework for diagnostic-quality auditing, a hospitalized
+# patient's secondary-diagnosis profile (DX2-DX25) discriminates the
+# principal diagnosis (DX1) among fifteen vascular, infectious, and
+# oncological phenotypes in the U.S. National Inpatient Sample, 2021-2023,
+# under severe class imbalance.
+
+random_seed: 42
+
+paths:
+  nis_root: "/home/kalayegd/Documents/0NISDatest2123"
+  data_dir: "data"
+  logs_dir: "logs"
+  outputs_dir: "outputs"
+  files:
+    "2021": { core: "NIS_2021/_pspp_converted/NIS_2021_Core.csv" }
+    "2022": { core: "NIS_2022/_pspp_converted/NIS_2022_Core.csv" }
+    "2023": { core: "NIS_2023/_pspp_converted/NIS_2023_Core.csv" }
+
+# Cross-year replication design: train on one year, model-select on a
+# second, final held-out test on a third. Never refit or re-tune after
+# looking at the test year.
+years:
+  train: "2021"
+  validation: "2022"
+  test: "2023"
+
+ingestion:
+  chunksize: 200000
+  # I10_DX1 = principal diagnosis (the label). I10_DX2..I10_DX25 = the
+  # secondary-diagnosis profile that is H1's predictor set. NIS 2021-2023
+  # Core files carry up to I10_DX40, but H1's wording caps the predictor
+  # window at DX25, so columns beyond DX25 are read but not used as
+  # features (kept only for an optional sensitivity check).
+  dx_regex: "^I10_DX([0-9]+)$"
+  max_secondary_dx: 25
+  key_candidates: ["KEY_NIS", "KEY"]
+  hosp_candidates: ["HOSP_NIS"]
+  weight_candidates: ["DISCWT"]
+
+features:
+  # How raw DX2-DX25 ICD-10-CM codes become model features.
+  # 3-character category (e.g. "I21.4" -> "I21") multi-hot encoding:
+  #   - self-contained (no external crosswalk file required)
+  #   - matches the granularity disease definitions.py already uses
+  #   - keeps dimensionality tractable relative to full-precision codes
+  #     under severe class imbalance
+  representation: "icd10_category3"
+  # Vocabulary (which 3-char categories become columns) is fit on the
+  # TRAINING year only, then applied unchanged to validation/test -
+  # categories never seen in training are ignored at inference time
+  # (not an error), consistent with genuine out-of-sample evaluation.
+  min_category_frequency: 50
+  # Optional demographic/admission covariates alongside the DX2-25
+  # category matrix, as a sensitivity variant (not part of the primary
+  # H1 test, which is DX2-25 alone).
+  include_demographic_covariates: true
+  demographic_cols: ["AGE", "FEMALE"]
+  admission_cols: ["ELECTIVE", "AWEEKEND", "PAY1"]
+
+leakage:
+  # Strict code-level masking: any DX2-25 code that itself matches ANY of
+  # the 15 phenotype definitions (same prefix+exclude logic as
+  # definitions.py) is dropped from the feature vocabulary entirely, for
+  # every row - not just rows of the matching class. See
+  # src/leakage/controls.py for the full rationale and the resulting
+  # audit table (outputs/tables/leakage_code_audit.csv).
+  mode: "strict_phenotype_mask"
+
+models:
+  algorithms: ["logistic_regression", "random_forest", "lightgbm", "xgboost"]
+  xgboost_gpu: false
+  class_weight: "balanced"
+
+tuning:
+  enabled: false
+  n_iter: 20
+  cv_folds: 3
+
+evaluation:
+  bootstrap_resamples: 1000
+  bootstrap_ci: 0.95
+
+negative_control:
+  n_permutations: 200
+
+h1_criteria:
+  # Per-class: statistically distinguishable from a permuted null AND
+  # clears an AUROC-OVR floor (or, for low-prevalence classes, a
+  # PPV-relative-to-null-rate floor).
+  per_class:
+    auroc_ovr_min: 0.70
+    ppv_lift_min: 2.0
+    low_prevalence_threshold: 0.01
+  # Aggregate: whole-model performance across all 15 classes on the
+  # held-out 2023 test year. Placeholders pending literature-derived
+  # benchmarks - see README limitations.
+  aggregate:
+    macro_auroc_ovr_min: 0.70
+    macro_mcc_min: 0.30
+    balanced_accuracy_min: 0.30
+  require_full_phenotype_coverage: true
+
+checkpointing:
+  overwrite: false
+
+parallel:
+  disease_workers: 1
+
+validation_min_rows: 100000

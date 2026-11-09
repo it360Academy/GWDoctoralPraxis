@@ -1,0 +1,10 @@
+{
+  "observed_macro_auroc_ovr": 0.5893416612701312,
+  "null_mean": 0.4999736760792672,
+  "null_std": 0.003540190718638842,
+  "n_permutations": 20,
+  "p_value": 0.047619047619047616,
+  "min_achievable_p": 0.047619047619047616,
+  "underpowered": false,
+  "significant_at_0.05": true
+}

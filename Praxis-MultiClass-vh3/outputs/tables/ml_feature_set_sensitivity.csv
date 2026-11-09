@@ -1,0 +1,9 @@
+feature_set,algorithm,adjusted_rand_index,normalized_mutual_info
+full (incidence+harm+rank+uncertainty+category),kmeans,0.7304928131416838,0.7958494039297702
+full (incidence+harm+rank+uncertainty+category),hierarchical,0.8330683624801272,0.8904803863556783
+no uncertainty,kmeans,0.8330683624801272,0.890480386355678
+no uncertainty,hierarchical,0.8330683624801272,0.8904803863556783
+no category,kmeans,0.41130298273155413,0.5856741531748304
+no category,hierarchical,0.2556390977443609,0.5101487611109078
+minimal (incidence+harm+rank only),kmeans,0.3181818181818182,0.49456594995420083
+minimal (incidence+harm+rank only),hierarchical,0.5238095238095238,0.6268122680104383

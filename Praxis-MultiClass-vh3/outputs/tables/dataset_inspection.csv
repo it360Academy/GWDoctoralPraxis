@@ -1,0 +1,4 @@
+role,year,path,exists,size_gb,n_columns,n_dx_columns,key_column,weight_column
+train,2021,/home/kalayegd/Documents/0NISDatest2123/NIS_2021/NIS_2021_Core.csv,True,1.993,127,40,KEY_NIS,DISCWT
+validation,2022,/home/kalayegd/Documents/0NISDatest2123/NIS_2022/NIS_2022_Core.csv,True,1.976,127,40,KEY_NIS,DISCWT
+test,2023,/home/kalayegd/Documents/0NISDatest2123/NIS_2023/NIS_2023_Core.csv,True,1.981,125,40,KEY_NIS,DISCWT

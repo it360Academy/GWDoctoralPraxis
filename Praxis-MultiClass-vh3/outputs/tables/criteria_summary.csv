@@ -1,0 +1,9 @@
+criterion,name,result,threshold,met
+1,Disease-specific incidence relative difference,50% of phenotypes within threshold,|rel diff| <= 25% for >= 50% of phenotypes,yes
+2,Rank-correlation of harm rankings,Spearman r = 0.782 (10 NIS-derived phenotypes),r >= 0.70,yes
+3,Top-5 harm-concentration difference,43.9% vs 38.7% (5.2 pp),<= 5.0 pp,no
+4,Top-15 harm-concentration difference,54.5% vs 50.7% (3.8 pp),<= 5.0 pp,yes
+5,Category-level burden-share stability,max category shift 6.2 pp; published share in interval for 2/3 categories,descriptive,descriptive
+6,Total serious-harm relative difference,+23.9%,|rel diff| <= 20%,no
+7,Monte Carlo uncertainty overlap,4/4 headline intervals overlap,all overlap,yes
+8,DX1-only sensitivity comparison,DX1-only reduction 24.5% vs published 30.9% (6.5 pp),<= 15 pp,yes

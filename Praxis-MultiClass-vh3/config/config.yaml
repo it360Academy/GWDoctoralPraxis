@@ -1,0 +1,75 @@
+# H3-BigThree: independent replication of Newman-Toker et al. (2024, BMJ
+# Qual Saf) "Burden of Serious Harms from Diagnostic Error in the United
+# States" using an independently-built ICD-10-CM extraction pipeline
+# against NIS 2021-2023, per Chapter 3, Section 3.6. Phenotype incidence
+# counts DX1 OR DX2 (equal, competing clinical weight); DX1-only is used
+# only for the criterion 8 sensitivity comparison.
+
+run_name: "H3_BigThree"
+random_seed: 42
+
+paths:
+  nis_root: "/home/kalayegd/Documents/0NISDatest2123"
+  data_dir: "data"
+  logs_dir: "logs"
+  outputs_dir: "outputs"
+  files:
+    "2021": { core: "NIS_2021/NIS_2021_Core.csv" }
+    "2022": { core: "NIS_2022/NIS_2022_Core.csv" }
+    "2023": { core: "NIS_2023/NIS_2023_Core.csv" }
+
+# development/validation/test roles are reused here as development
+# (2021), validation (2022), and replication (2023) years, consistent
+# with the temporal design shared across H1/H2/H3 (Chapter 3, Section
+# 3.2.3) - H3 uses all three as independent incidence-reconstruction
+# years rather than a train/select/test split, since there is no model
+# being fit, but the same three-year, non-pooled structure applies.
+years: { train: "2021", validation: "2022", test: "2023" }
+
+ingestion:
+  chunksize: 200000
+  dx_regex: "^I10_DX([0-9]+)$"
+  key_candidates: ["KEY_NIS", "KEY"]
+  weight_candidates: ["DISCWT"]
+
+incidence:
+  bootstrap_iterations: 200
+  bootstrap_max_rows: 1000000
+
+montecarlo:
+  n_draws: 10000
+
+# Track 2: ML structural validation (clustering agreement) - Chapter 3
+# extension. Exploratory/supporting evidence alongside, not a
+# replacement for, the eight prespecified Track 1 criteria below.
+ml_validation:
+  k_range: [2, 3, 4]        # cluster counts tested; k selected by silhouette on published structure
+  n_permutations: 10000     # permutation-test draws for ARI/NMI significance
+
+# Consensus hierarchical clustering over Monte Carlo draws (report
+# Section 8). Clusters each draw's per-phenotype log harm (category is
+# deliberately NOT a feature), then derives a consensus from the
+# co-clustering matrix. k is selected by silhouette on the published
+# structure only, then applied to both structures.
+consensus_clustering:
+  n_draws: 1000             # Monte Carlo draws clustered per structure
+  k_range: [2, 3, 4, 5]
+  linkage: "ward"           # per-draw linkage on 1-D log harm
+  n_permutations: 10000     # permutation test for consensus ARI
+
+# UNVERIFIED PLACEHOLDERS - see README. These are the numerical stability
+# thresholds for the eight criteria in Chapter 3, Table 3.3, fixed here
+# before the final replication analysis is run against real data.
+criteria_thresholds:
+  max_incidence_relative_difference: 0.25        # criterion 1: |rel diff| per disease
+  min_share_diseases_within_threshold: 0.50       # criterion 1: share of diseases that must clear it
+  min_rank_correlation: 0.70                      # criterion 2 (10 NIS-derived phenotypes)
+  max_concentration_diff_pp: 5.0                  # criteria 3 & 4, percentage points
+  max_total_harm_relative_difference: 0.20        # criterion 6
+  max_sensitivity_reduction_diff: 0.15            # criterion 8: |re-derived - published| DX1-only reduction
+  min_criteria_met: 5                             # of 7 scored criteria (criterion 5 is descriptive)
+
+checkpointing:
+  overwrite: false
+
+validation_min_rows: 100000

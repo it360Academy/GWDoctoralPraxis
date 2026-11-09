@@ -1,0 +1,76 @@
+# Smoke-test config: runs the FULL pipeline end-to-end against small
+# synthetic ICD-10-shaped data (scripts/generate_synthetic_data.py) and a
+# real-but-partial SEED Excludes1 ontology (sepsis pairs only, from an
+# actual verified CMS excerpt - see ontology/SOURCE.md).
+#
+# Verifies the CODE works end-to-end. NEVER treat smoke-run DEV rates,
+# p-values, or the H2 verdict produced by this config as research
+# evidence - the data is fabricated and the ontology is intentionally
+# incomplete.
+
+random_seed: 42
+
+paths:
+  nis_root: "data/synthetic"
+  data_dir: "data/smoke"
+  logs_dir: "logs"
+  outputs_dir: "outputs_smoke"
+  files:
+    "2021": { core: "NIS_2021_Core.csv", hospital: "NIS_2021_Hospital.csv" }
+    "2022": { core: "NIS_2022_Core.csv", hospital: "NIS_2022_Hospital.csv" }
+    "2023": { core: "NIS_2023_Core.csv", hospital: "NIS_2023_Hospital.csv" }
+
+years: ["2021", "2022", "2023"]
+ml_years: { development: "2021", validation: "2022", replication: "2023" }
+
+ingestion:
+  chunksize: 50000
+  dx_regex: "^I10_DX([0-9]+)$"
+  max_secondary_dx: 25
+  key_candidates: ["KEY_NIS", "KEY"]
+  hosp_candidates: ["HOSP_NIS"]
+  weight_candidates: ["DISCWT"]
+
+ontology:
+  # Every year points at the same SEED ontology file for the smoke test.
+  nis_year_to_fy_mapping: { "2021": "SEED", "2022": "SEED", "2023": "SEED" }
+  pairs_csv_template: "ontology/excludes1_pairs_v{fy}.csv"
+  allow_seed_ontology: true
+
+negative_controls:
+  chance:
+    n_permutations: 30
+    n_bootstrap: 30
+    strata_cols: ["AGE", "FEMALE"]
+    age_band_width: 10
+  artifact:
+    hospital_shuffle_n_permutations: 30
+  significance_alpha: 0.05
+
+stability_criteria:
+  rate_ratio_threshold: 1.5
+  pair_rank_correlation_threshold: 0.70
+  pair_rank_top_n: 20
+  aiml_performance_max_abs_diff: 0.10
+
+models:
+  algorithms: ["logistic_regression", "random_forest"]
+  class_weight: "balanced"
+
+evaluation:
+  bootstrap_resamples: 30
+
+sensitivity:
+  position_cutoffs: [5, 10, 15, 25]
+  coding_intensity_bins: [0, 5, 10, 15, 20, 25, 40]
+
+checkpointing:
+  overwrite: true
+
+parallel:
+  n_jobs: 1
+
+explainability:
+  use_shap: false
+
+validation_min_rows: 500

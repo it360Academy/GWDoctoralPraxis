@@ -1,0 +1,195 @@
+fiscal_year,home_code,home_desc,home_level,chapter,section_id,note_text,target_raw,parse_status
+2023,CHAPTER_1,Certain infectious and parasitic diseases (A00-B99),chapter,1,,certain localized infections - see body system-related chapters,,no_code_found
+2023,B81,"Other intestinal helminthiases, not elsewhere classified",category,1,B65-B83,angiostrongyliasis due to:,,no_code_found
+2023,C08,Malignant neoplasm of other and unspecified major salivary glands,category,2,C00-C14,malignant neoplasms of specified minor salivary glands which are classified according to their anatomical location,,no_code_found
+2023,C49,Malignant neoplasm of other connective and soft tissue,category,2,C45-C49,malignant neoplasm of cartilage (of):,,no_code_found
+2023,C80,Malignant neoplasm without specification of site,category,2,C76-C80,malignant neoplasm of specified multiple sites- code to each site,,no_code_found
+2023,D11,Benign neoplasm of major salivary glands,category,2,D10-D36,benign neoplasms of specified minor salivary glands which are classified according to their anatomical location,,no_code_found
+2023,D53.8,Other specified nutritional anemias,subcategory,3,D50-D53,"nutritional deficiencies without anemia, such as:",,no_code_found
+2023,D65,Disseminated intravascular coagulation [defibrination syndrome],category,3,D65-D69,disseminated intravascular coagulation (complicating):,,no_code_found
+2023,D72.825,Bandemia,code,3,D70-D77,confirmed infection - code to infection,,no_code_found
+2023,E34.3,Short stature due to endocrine disorder,subcategory,4,E20-E35,short stature in specific dysmorphic syndromes - code to syndrome - see Alphabetical Index,,no_code_found
+2023,E72,Other disorders of amino-acid metabolism,category,4,E70-E88,disorders of:,,no_code_found
+2023,E87.2,Acidosis,subcategory,4,E70-E88,"diabetic acidosis - see categories E08-E10, E11, E13 with ketoacidosis",,no_code_found
+2023,F06.7,Mild neurocognitive disorder due to known physiological condition,subcategory,5,F01-F09,"cognitive deficits following (sequelae of) cerebral hemorrhage or infarction (I69.01-I69.11-, I69.21-I69.31-, I69.81- I69.91-)",,no_code_found
+2023,F80.81,Childhood onset fluency disorder,code,5,F80-F89,fluency disorder (stuttering) following cerebrovascular disease (I69. with final characters -23),,no_code_found
+2023,F94.1,Reactive attachment disorder of childhood,subcategory,5,F90-F98,normal variation in pattern of selective attachment,,no_code_found
+2023,F98.5,Adult onset fluency disorder,subcategory,5,F90-F98,fluency disorder (stuttering) following cerebrovascular disease (I69. with final characters -23),,no_code_found
+2023,G01,Meningitis in bacterial diseases classified elsewhere,category,6,G00-G09,meningitis (in):,,no_code_found
+2023,G02,Meningitis in other infectious and parasitic diseases classified elsewhere,category,6,G00-G09,infectious mononucleosis complicated by meningitis (B27.- with fifth character 2),,no_code_found
+2023,G07,Intracranial and intraspinal abscess and granuloma in diseases classified elsewhere,category,6,G00-G09,abscess of brain:,,no_code_found
+2023,G08,Intracranial and intraspinal phlebitis and thrombophlebitis,category,6,G00-G09,intracranial phlebitis and thrombophlebitis complicating:,,no_code_found
+2023,SECTION_G50-G59,"Nerve, nerve root and plexus disorders (G50-G59)",section,6,G50-G59,"current traumatic nerve, nerve root and plexus disorders - see Injury, nerve by body region",,no_code_found
+2023,G54,Nerve root and plexus disorders,category,6,G50-G59,current traumatic nerve root and plexus disorders - see nerve injury by body region,,no_code_found
+2023,G54.5,Neuralgic amyotrophy,subcategory,6,G50-G59,neuralgic amyotrophy in diabetes mellitus (E08-E13 with .44),,no_code_found
+2023,G56,Mononeuropathies of upper limb,category,6,G50-G59,current traumatic nerve disorder - see nerve injury by body region,,no_code_found
+2023,G57,Mononeuropathies of lower limb,category,6,G50-G59,current traumatic nerve disorder - see nerve injury by body region,,no_code_found
+2023,G59,Mononeuropathy in diseases classified elsewhere,category,6,G50-G59,diabetic mononeuropathy (E08-E13 with .41),,no_code_found
+2023,G63,Polyneuropathy in diseases classified elsewhere,category,6,G60-G65,polyneuropathy (in):,,no_code_found
+2023,G63,Polyneuropathy in diseases classified elsewhere,category,6,G60-G65,diabetes mellitus (E08-E13 with .42),,no_code_found
+2023,G63,Polyneuropathy in diseases classified elsewhere,category,6,G60-G65,infectious mononucleosis complicated by polyneuropathy (B27.0-B27.9 with fifth character 1),,no_code_found
+2023,G73.7,Myopathy in diseases classified elsewhere,subcategory,6,G70-G73,myopathy in:,,no_code_found
+2023,G98.0,"Neurogenic arthritis, not elsewhere classified",subcategory,6,G89-G99,spondylopathy (in):,,no_code_found
+2023,G99.0,Autonomic neuropathy in diseases classified elsewhere,subcategory,6,G89-G99,diabetic autonomic neuropathy (E08-E13 with .43),,no_code_found
+2023,G99.2,Myelopathy in diseases classified elsewhere,subcategory,6,G89-G99,myelopathy in:,,no_code_found
+2023,G99.8,Other specified disorders of nervous system in diseases classified elsewhere,subcategory,6,G89-G99,nervous system involvement in:,,no_code_found
+2023,H20.0,Acute and subacute iridocyclitis,subcategory,7,H15-H22,"iridocyclitis, iritis, uveitis (due to) (in) diabetes mellitus (E08-E13 with .39)",,no_code_found
+2023,H32,Chorioretinal disorders in diseases classified elsewhere,category,7,H30-H36,chorioretinitis (in):,,no_code_found
+2023,H62.4,Otitis externa in other diseases classified elsewhere,subcategory,8,H60-H62,otitis externa (in):,,no_code_found
+2023,H67,Otitis media in diseases classified elsewhere,category,8,H65-H75,otitis media in:,,no_code_found
+2023,H75.0,Mastoiditis in infectious and parasitic diseases classified elsewhere,subcategory,8,H65-H75,mastoiditis (in):,,no_code_found
+2023,H92.2,Otorrhagia,subcategory,8,H90-H94,traumatic otorrhagia - code to injury,,no_code_found
+2023,H94.0,Acoustic neuritis in infectious and parasitic diseases classified elsewhere,subcategory,8,H90-H94,acoustic neuritis (in):,,no_code_found
+2023,I00,Rheumatic fever without heart involvement,category,9,I00-I02,rheumatic fever with heart involvement (I01.0 -I01.9),,no_code_found
+2023,I01,Rheumatic fever with heart involvement,category,9,I00-I02,chronic diseases of rheumatic origin (I05-I09) unless rheumatic fever is also present or there is evidence of reactivation or activity of the rheumatic process.,,no_code_found
+2023,I32,Pericarditis in diseases classified elsewhere,category,9,I30-I5A,pericarditis (in):,,no_code_found
+2023,I39,Endocarditis and heart valve disorders in diseases classified elsewhere,category,9,I30-I5A,endocardial involvement in:,,no_code_found
+2023,I41,Myocarditis in diseases classified elsewhere,category,9,I30-I5A,myocarditis (in):,,no_code_found
+2023,I43,Cardiomyopathy in diseases classified elsewhere,category,9,I30-I5A,cardiomyopathy (in):,,no_code_found
+2023,I52,Other heart disorders in diseases classified elsewhere,category,9,I30-I5A,heart disease (in):,,no_code_found
+2023,I68.2,Cerebral arteritis in other diseases classified elsewhere,subcategory,9,I60-I69,cerebral arteritis (in):,,no_code_found
+2023,I73.8,Other specified peripheral vascular diseases,subcategory,9,I70-I79,diabetic (peripheral) angiopathy (E08-E13 with .51-.52),,no_code_found
+2023,I77.0,"Arteriovenous fistula, acquired",subcategory,9,I70-I79,traumatic - see injury of blood vessel by body region,,no_code_found
+2023,I77.2,Rupture of artery,subcategory,9,I70-I79,traumatic rupture of artery - see injury of blood vessel by body region,,no_code_found
+2023,I77.6,"Arteritis, unspecified",subcategory,9,I70-I79,arteritis or endarteritis:,,no_code_found
+2023,I79.8,"Other disorders of arteries, arterioles and capillaries in diseases classified elsewhere",subcategory,9,I70-I79,diabetic (peripheral) angiopathy (E08-E13 with .51-.52),,no_code_found
+2023,I96,"Gangrene, not elsewhere classified",category,9,I95-I99,gangrene of certain specified sites - see Alphabetical Index,,no_code_found
+2023,J17,Pneumonia in diseases classified elsewhere,category,10,J09-J18,whooping cough with pneumonia (A37 with fifth-character 1),,no_code_found
+2023,J39.3,"Upper respiratory tract hypersensitivity reaction, site unspecified",subcategory,10,J30-J39,"hypersensitivity reaction of upper respiratory tract, such as:",,no_code_found
+2023,J90,"Pleural effusion, not elsewhere classified",category,10,J90-J94,malignant pleural effusion (J91.0)),,no_code_found
+2023,J98.11,Atelectasis,code,10,J96-J99,newborn atelectasis,,no_code_found
+2023,J99,Respiratory disorders in diseases classified elsewhere,category,10,J96-J99,respiratory disorders in:,,no_code_found
+2023,K00.2,Abnormalities of size and form of teeth,subcategory,11,K00-K14,"tuberculum Carabelli, which is regarded as a normal variation and should not be coded",,no_code_found
+2023,K03.81,Cracked tooth,code,11,K00-K14,asymptomatic craze lines in enamel - omit code,,no_code_found
+2023,K56.69,Other intestinal obstruction,code,11,K55-K64,intestinal obstruction due to specified condition-code to condition,,no_code_found
+2023,K63.0,Abscess of intestine,subcategory,11,K55-K64,"abscess of intestine with Crohn's disease (K50.014, K50.114, K50.814, K50.914,)",,no_code_found
+2023,K63.2,Fistula of intestine,subcategory,11,K55-K64,"fistula of intestine with Crohn's disease (K50.013, K50.113, K50.813, K50.913,)",,no_code_found
+2023,L92.1,"Necrobiosis lipoidica, not elsewhere classified",subcategory,12,L80-L99,necrobiosis lipoidica associated with diabetes mellitus (E08-E13 with .620),,no_code_found
+2023,L99,Other disorders of skin and subcutaneous tissue in diseases classified elsewhere,category,12,L80-L99,skin disorders in diabetes (E08-E13 with .62-),,no_code_found
+2023,M12.5,Traumatic arthropathy,subcategory,13,M05-M14,current injury-see Alphabetic Index,,no_code_found
+2023,M14,Arthropathies in other diseases classified elsewhere,category,13,M05-M14,arthropathy in:,,no_code_found
+2023,M14,Arthropathies in other diseases classified elsewhere,category,13,M05-M14,diabetes mellitus (E08-E13 with .61-),,no_code_found
+2023,M14.6,Charcôt's joint,subcategory,13,M05-M14,Charcôt's joint in diabetes mellitus (E08-E13 with .610),,no_code_found
+2023,M24,Other specific joint derangements,category,13,M20-M25,current injury - see injury of joint by body region,,no_code_found
+2023,M24.3,"Pathological dislocation of joint, not elsewhere classified",subcategory,13,M20-M25,current injury - see injury of joints and ligaments by body region,,no_code_found
+2023,M25.0,Hemarthrosis,subcategory,13,M20-M25,current injury - see injury of joint by body region,,no_code_found
+2023,SECTION_M30-M36,Systemic connective tissue disorders (M30-M36),section,13,M30-M36,"autoimmune disease, single organ or single cell-type -code to relevant condition category",,no_code_found
+2023,M43.1,Spondylolisthesis,subcategory,13,M40-M43,"acute traumatic of sites other than lumbosacral- code to Fracture, vertebra, by region",,no_code_found
+2023,M43.6,Torticollis,subcategory,13,M40-M43,"current injury - see Injury, of spine, by body region",,no_code_found
+2023,M48.5,"Collapsed vertebra, not elsewhere classified",subcategory,13,M45-M49,"current injury - see Injury of spine, by body region",,no_code_found
+2023,SECTION_M50-M54,Other dorsopathies (M50-M54),section,13,M50-M54,current injury - see injury of spine by body region,,no_code_found
+2023,M62.0,Separation of muscle (nontraumatic),subcategory,13,M60-M63,traumatic separation of muscle- see strain of muscle by body region,,no_code_found
+2023,M62.1,Other rupture of muscle (nontraumatic),subcategory,13,M60-M63,traumatic rupture of muscle - see strain of muscle by body region,,no_code_found
+2023,M65,Synovitis and tenosynovitis,category,13,M65-M67,current injury - see injury of ligament or tendon by body region,,no_code_found
+2023,M86,Osteomyelitis,category,13,M86-M90,osteomyelitis due to:,,no_code_found
+2023,M90,Osteopathies in diseases classified elsewhere,category,13,M86-M90,"osteochondritis, osteomyelitis, and osteopathy (in):",,no_code_found
+2023,M90,Osteopathies in diseases classified elsewhere,category,13,M86-M90,diabetes mellitus (E08-E13 with .69-),,no_code_found
+2023,N08,Glomerular disorders in diseases classified elsewhere,category,14,N00-N08,"glomerulonephritis, nephritis and nephropathy (in):",,no_code_found
+2023,N08,Glomerular disorders in diseases classified elsewhere,category,14,N00-N08,diabetes (E08-E13 with .21),,no_code_found
+2023,N16,Renal tubulo-interstitial disorders in diseases classified elsewhere,category,14,N10-N16,renal tubular degeneration in diabetes (E08-E13 with .29),,no_code_found
+2023,N29,Other disorders of kidney and ureter in diseases classified elsewhere,category,14,N25-N29,disorders of kidney and ureter in:,,no_code_found
+2023,N32.81,Overactive bladder,code,14,N30-N39,frequent urination due to specified bladder condition- code to condition,,no_code_found
+2023,N37,Urethral disorders in diseases classified elsewhere,category,14,N30-N39,urethritis (in):,,no_code_found
+2023,N39.0,"Urinary tract infection, site not specified",subcategory,14,N30-N39,"urinary tract infection of specified site, such as:",,no_code_found
+2023,SECTION_N70-N77,Inflammatory diseases of female pelvic organs (N70-N77),section,14,N70-N77,inflammatory diseases of female pelvic organs complicating:,,no_code_found
+2023,N76.82,Fournier disease of vagina and vulva,code,14,N70-N77,gangrene in diabetes mellitus (E08-E13 with .52),,no_code_found
+2023,N83.6,Hematosalpinx,subcategory,14,N80-N98,hematosalpinx (with) (in):,,no_code_found
+2023,N92.6,"Irregular menstruation, unspecified",subcategory,14,N80-N98,irregular menstruation with:,,no_code_found
+2023,O22,Venous complications and hemorrhoids in pregnancy,category,15,O20-O29,venous complications of:,,no_code_found
+2023,O28,Abnormal findings on antenatal screening of mother,category,15,O20-O29,diagnostic findings classified elsewhere - see Alphabetical Index,,no_code_found
+2023,P28.2,Cyanotic attacks of newborn,subcategory,16,P19-P29,apnea of newborn (P28.3- - P28.4-),,no_code_found
+2023,Q70.4,"Polysyndactyly, unspecified",subcategory,17,Q65-Q79,specified syndactyly of hand and feet - code to specified conditions (Q70.0- -Q70.3-),,no_code_found
+2023,Q75,Other congenital malformations of skull and face bones,category,17,Q65-Q79,skull defects associated with congenital anomalies of brain such as:,,no_code_found
+2023,R21,Rash and other nonspecific skin eruption,category,18,R20-R23,specified type of rash- code to condition,,no_code_found
+2023,R27.0,"Ataxia, unspecified",subcategory,18,R25-R29,ataxia following cerebrovascular disease (I69. with final characters -93),,no_code_found
+2023,R29.810,Facial weakness,code,18,R25-R29,facial weakness following cerebrovascular disease (I69. with final characters -92),,no_code_found
+2023,R31,Hematuria,category,18,R30-R39,"hematuria included with underlying conditions, such as:",,no_code_found
+2023,R41.3,Other amnesia,subcategory,18,R40-R46,amnestic syndrome due to psychoactive substance use (F10-F19 with 5th character .6),,no_code_found
+2023,R41.82,"Altered mental status, unspecified",code,18,R40-R46,altered mental status due to known condition - code to condition,,no_code_found
+2023,R44,Other symptoms and signs involving general sensations and perceptions,category,18,R40-R46,hallucinations in drug psychosis (F11-F19 with fifth to sixth characters 51),,no_code_found
+2023,R47.01,Aphasia,code,18,R47-R49,aphasia following cerebrovascular disease (I69. with final characters -20),,no_code_found
+2023,R47.02,Dysphasia,code,18,R47-R49,dysphasia following cerebrovascular disease (I69. with final characters -21),,no_code_found
+2023,R47.1,Dysarthria and anarthria,subcategory,18,R47-R49,dysarthria following cerebrovascular disease (I69. with final characters -22),,no_code_found
+2023,R47.8,Other speech disturbances,subcategory,18,R47-R49,dysarthria following cerebrovascular disease (I69. with final characters -28),,no_code_found
+2023,R47.82,Fluency disorder in conditions classified elsewhere,code,18,R47-R49,fluency disorder (stuttering) following cerebrovascular disease (I69. with final characters -23),,no_code_found
+2023,R48.2,Apraxia,subcategory,18,R47-R49,apraxia following cerebrovascular disease (I69. with final characters -90),,no_code_found
+2023,R52,"Pain, unspecified",category,18,R50-R69,"localized pain, unspecified type - code to pain by site, such as:",,no_code_found
+2023,R58,"Hemorrhage, not elsewhere classified",category,18,R50-R69,"hemorrhage included with underlying conditions, such as:",,no_code_found
+2023,R65.1,Systemic inflammatory response syndrome (SIRS) of non-infectious origin,subcategory,18,R50-R69,sepsis- code to infection,,no_code_found
+2023,R78.81,Bacteremia,code,18,R70-R79,sepsis-code to specified infection,,no_code_found
+2023,SECTION_R80-R82,"Abnormal findings on examination of urine, without diagnosis (R80-R82)",section,18,R80-R82,diagnostic abnormal findings classified elsewhere - see Alphabetical Index,,no_code_found
+2023,SECTION_R83-R89,"Abnormal findings on examination of other body fluids, substances and tissues, without diagnosis (R83-R89)",section,18,R83-R89,diagnostic abnormal findings classified elsewhere - see Alphabetical Index,,no_code_found
+2023,SECTION_R90-R94,"Abnormal findings on diagnostic imaging and in function studies, without diagnosis (R90-R94)",section,18,R90-R94,diagnostic abnormal findings classified elsewhere - see Alphabetical Index,,no_code_found
+2023,S01,Open wound of head,category,19,S00-S09,open skull fracture (S02.- with 7th character B),,no_code_found
+2023,S06.0,Concussion,subcategory,19,S00-S09,"concussion with other intracranial injuries classified in subcategories S06.1- to S06.6-, and S06.81- to S06.89-, code to specified intracranial injury",,no_code_found
+2023,S06.9,Unspecified intracranial injury,subcategory,19,S00-S09,conditions classifiable to S06.0- to S06.8-code to specified intracranial injury,,no_code_found
+2023,S23.0,Traumatic rupture of thoracic intervertebral disc,subcategory,19,S20-S29,rupture or displacement (nontraumatic) of thoracic intervertebral disc NOS (M51.- with fifth character 4),,no_code_found
+2023,S33.0,Traumatic rupture of lumbar intervertebral disc,subcategory,19,S30-S39,rupture or displacement (nontraumatic) of lumbar intervertebral disc NOS (M51.- with fifth character 6),,no_code_found
+2023,S51,Open wound of elbow and forearm,category,19,S50-S59,open fracture of elbow and forearm (S52.- with open fracture 7th character),,no_code_found
+2023,S61,"Open wound of wrist, hand and fingers",category,19,S60-S69,"open fracture of wrist, hand and finger (S62.- with 7th character B)",,no_code_found
+2023,S91,"Open wound of ankle, foot and toes",category,19,S90-S99,"open fracture of ankle, foot and toes (S92.-with 7th character B)",,no_code_found
+2023,T46.3,"Poisoning by, adverse effect of and underdosing of coronary vasodilators",subcategory,19,T36-T50,"poisoning by, adverse effect of and underdosing of",,no_code_found
+2023,T61,Toxic effect of noxious substances eaten as seafood,category,19,T51-T65,"allergic reaction to food, such as:",,no_code_found
+2023,T62,Toxic effect of other noxious substances eaten as food,category,19,T51-T65,"allergic reaction to food, such as:",,no_code_found
+2023,T66,"Radiation sickness, unspecified",category,19,T66-T78,"specified adverse effects of radiation, such as:",,no_code_found
+2023,T75.1,Unspecified effects of drowning and nonfatal submersion,subcategory,19,T66-T78,specified effects of drowning- code to effects,,no_code_found
+2023,T78.4,Other and unspecified allergy,subcategory,19,T66-T78,specified types of allergic reaction such as:,,no_code_found
+2023,T79.1,Fat embolism (traumatic),subcategory,19,T79,fat embolism complicating:,,no_code_found
+2023,T86.2,Complications of heart transplant,subcategory,19,T80-T88,complication of:,,no_code_found
+2023,T88.2,Shock due to anesthesia,subcategory,19,T80-T88,complications of anesthesia (in):,,no_code_found
+2023,T88.7,Unspecified adverse effect of drug or medicament,subcategory,19,T80-T88,"specified adverse effects of drugs and medicaments (A00-R94 and T80-T88.6, T88.8)",,no_code_found
+2023,SECTION_V00-V99,Transport accidents (V00-V99),section,20,V00-V99,automobile or motor cycle in stationary use or maintenance- code to type of accident,,no_code_found
+2023,V00.118,Other in-line roller-skate accident,code,20,V00-V09,roller-skater collision with other land transport vehicle (V01-V09 with 5th character 1),,no_code_found
+2023,V00.128,Other non-in-line roller-skating accident,code,20,V00-V09,roller-skater collision with other land transport vehicle (V01-V09 with 5th character 1),,no_code_found
+2023,V00.138,Other skateboard accident,code,20,V00-V09,skateboarder collision with other land transport vehicle (V01-V09 with 5th character 2),,no_code_found
+2023,V00.148,Other scooter (nonmotorized) accident,code,20,V00-V09,scooter (nonmotorized) collision with other land transport vehicle (V01-V09 with fifth character 9),,no_code_found
+2023,V00.218,Other ice-skates accident,code,20,V00-V09,ice-skater collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,V00.228,Other sled accident,code,20,V00-V09,sled collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,V00.288,Other accident on other gliding-type pedestrian conveyance,code,20,V00-V09,gliding-type pedestrian conveyance collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,V00.318,Other snowboard accident,code,20,V00-V09,snowboarder collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,V00.328,Other snow-ski accident,code,20,V00-V09,snow-skier collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,V00.898,Other accident on other pedestrian conveyance,code,20,V00-V09,other pedestrian (conveyance) collision with other land transport vehicle (V01-V09 with 5th character 9),,no_code_found
+2023,SECTION_V60-V69,Occupant of heavy transport vehicle injured in transport accident (V60-V69),section,20,V60-V69,bus,,no_code_found
+2023,SECTION_V60-V69,Occupant of heavy transport vehicle injured in transport accident (V60-V69),section,20,V60-V69,motorcoach,,no_code_found
+2023,V82.5,Occupant of streetcar injured by fall in streetcar,subcategory,20,V80-V89,fall in streetcar:,,no_code_found
+2023,V82.6,Occupant of streetcar injured by fall from streetcar,subcategory,20,V80-V89,fall from streetcar:,,no_code_found
+2023,V87,Traffic accident of specified type but victim's mode of transport unknown,category,20,V80-V89,collision involving:,,no_code_found
+2023,V88,Nontraffic accident of specified type but victim's mode of transport unknown,category,20,V80-V89,collision involving:,,no_code_found
+2023,W55,Contact with other mammals,category,20,W50-W64,animal being ridden- see transport accidents,,no_code_found
+2023,SECTION_W85-W99,"Exposure to electric current, radiation and extreme ambient air temperature and pressure (W85-W99)",section,20,W85-W99,exposure to:,,no_code_found
+2023,X83,Intentional self-harm by other specified means,category,20,X71-X83,intentional self-harm by poisoning or contact with toxic substance- See Table of Drugs and Chemicals,,no_code_found
+2023,Y04,Assault by bodily force,category,20,X92-Y09,assault by:,,no_code_found
+2023,Z00.0,Encounter for general adult medical examination,subcategory,21,Z00-Z13,encounter for examination of sign or symptom- code to sign or symptom,,no_code_found
+2023,Z01,"Encounter for other special examination without complaint, suspected or reported diagnosis",category,21,Z00-Z13,"encounter for laboratory, radiologic and imaging examinations for sign(s) and symptom(s) - code to the sign(s) or symptom(s)",,no_code_found
+2023,Z03,Encounter for medical observation for suspected diseases and conditions ruled out,category,21,Z00-Z13,signs or symptoms under study- code to signs or symptoms,,no_code_found
+2023,Z11,Encounter for screening for infectious and parasitic diseases,category,21,Z00-Z13,encounter for diagnostic examination-code to sign or symptom,,no_code_found
+2023,Z12,Encounter for screening for malignant neoplasms,category,21,Z00-Z13,encounter for diagnostic examination-code to sign or symptom,,no_code_found
+2023,Z13,Encounter for screening for other diseases and disorders,category,21,Z00-Z13,encounter for diagnostic examination-code to sign or symptom,,no_code_found
+2023,Z18,Retained foreign body fragments,category,21,Z18,"superficial foreign body (non-embedded splinter) - code to superficial foreign body, by site",,no_code_found
+2023,Z20,Contact with and (suspected) exposure to communicable diseases,category,21,Z20-Z29,diagnosed current infectious or parasitic disease -see Alphabetic Index,,no_code_found
+2023,Z20.6,Contact with and (suspected) exposure to human immunodeficiency virus [HIV],subcategory,21,Z20-Z29,asymptomatic human immunodeficiency virus [HIV],,no_code_found
+2023,Z31.83,Encounter for assisted reproductive fertility procedure cycle,code,21,Z30-Z39,pre-cycle diagnosis and testing - code to reason for encounter,,no_code_found
+2023,Z36,Encounter for antenatal screening of mother,category,21,Z30-Z39,diagnostic examination- code to sign or symptom,,no_code_found
+2023,Z36,Encounter for antenatal screening of mother,category,21,Z30-Z39,suspected fetal condition affecting management of pregnancy - code to condition in Chapter 15,,no_code_found
+2023,Z39.0,Encounter for care and examination of mother immediately after delivery,subcategory,21,Z30-Z39,care for postpartum complication- see Alphabetic index,,no_code_found
+2023,Z40,Encounter for prophylactic surgery,category,21,Z40-Z53,therapeutic organ removal-code to condition,,no_code_found
+2023,Z42,Encounter for plastic and reconstructive surgery following medical procedure or healed injury,category,21,Z40-Z53,encounter for plastic surgery for treatment of current injury - code to relevent injury,,no_code_found
+2023,Z44,Encounter for fitting and adjustment of external prosthetic device,category,21,Z40-Z53,malfunction or other complications of device - see Alphabetical Index,,no_code_found
+2023,Z45,Encounter for adjustment and management of implanted device,category,21,Z40-Z53,malfunction or other complications of device - see Alphabetical Index,,no_code_found
+2023,Z46,Encounter for fitting and adjustment of other devices,category,21,Z40-Z53,malfunction or other complications of device - see Alphabetical Index,,no_code_found
+2023,Z47,Orthopedic aftercare,category,21,Z40-Z53,aftercare for healing fracture-code to fracture with 7th character D,,no_code_found
+2023,Z47.2,Encounter for removal of internal fixation device,subcategory,21,Z40-Z53,encounter for adjustment of internal fixation device for fracture treatment- code to fracture with appropriate 7th character,,no_code_found
+2023,Z47.2,Encounter for removal of internal fixation device,subcategory,21,Z40-Z53,encounter for removal of external fixation device- code to fracture with 7th character D,,no_code_found
+2023,Z47.33,Aftercare following explantation of knee joint prosthesis,code,21,Z40-Z53,acquired absence of knee joint following prior explantation of knee prosthesis (Z89.52-,,no_code_found
+2023,Z48,Encounter for other postprocedural aftercare,category,21,Z40-Z53,"encounter for aftercare following injury - code to Injury, by site, with appropriate 7th character for subsequent encounter",,no_code_found
+2023,Z48.81,Encounter for surgical aftercare following surgery on specified body systems,code,21,Z40-Z53,aftercare for injury- code the injury with 7th character D,,no_code_found
+2023,Z52,Donors of organs and tissues,category,21,Z40-Z53,cadaveric donor - omit code,,no_code_found
+2023,Z78.1,Physical restraint status,subcategory,21,Z77-Z99,physical restraint due to a procedure - omit code,,no_code_found
+2023,Z85.6,Personal history of leukemia,subcategory,21,Z77-Z99,leukemia in remission C91.0-C95.9 with 5th character 1,,no_code_found
+2023,Z86.1,Personal history of infectious and parasitic diseases,subcategory,21,Z77-Z99,personal history of infectious diseases specific to a body system,,no_code_found
+2023,Z90,"Acquired absence of organs, not elsewhere classified",category,21,Z77-Z99,congenital absence - see Alphabetical Index,,no_code_found
+2023,Z91.12,Patient's intentional underdosing of medication regimen,code,21,Z77-Z99,adverse effect of prescribed drug taken as directed- code to adverse effect,,no_code_found
+2023,Z91.12,Patient's intentional underdosing of medication regimen,code,21,Z77-Z99,poisoning (overdose) -code to poisoning,,no_code_found
+2023,Z91.13,Patient's unintentional underdosing of medication regimen,code,21,Z77-Z99,adverse effect of prescribed drug taken as directed- code to adverse effect,,no_code_found
+2023,Z91.13,Patient's unintentional underdosing of medication regimen,code,21,Z77-Z99,poisoning (overdose) -code to poisoning,,no_code_found
+2023,Z94,Transplanted organ and tissue status,category,21,Z77-Z99,complications of transplanted organ or tissue - see Alphabetical Index,,no_code_found

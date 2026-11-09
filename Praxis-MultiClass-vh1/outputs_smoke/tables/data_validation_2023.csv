@@ -1,0 +1,8 @@
+year,check,passed,detail
+2023,nonempty,True,"n=20,000 (min=500)"
+2023,weights_positive,True,share>0 = 1.0000
+2023,age_plausible,True,"in[0,120] = 1.0000"
+2023,female_binary,True,
+2023,cohort_nonempty,True,"15-phenotype cohort = 9,043/20,000"
+2023,all_15_phenotypes_observed,True,all 15 present
+2023,ambiguous_dx1_rare,True,0 discharges (0.0000%) matched >1 phenotype on I10_DX1 - excluded from cohort

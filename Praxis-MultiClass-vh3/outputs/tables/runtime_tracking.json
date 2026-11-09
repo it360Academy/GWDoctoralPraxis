@@ -1,0 +1,56 @@
+[
+  {
+    "stage": "inspect",
+    "seconds": 0.01,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:15:56"
+  },
+  {
+    "stage": "ingest",
+    "seconds": 137.02,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:18:13"
+  },
+  {
+    "stage": "eda",
+    "seconds": 1.48,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:18:15"
+  },
+  {
+    "stage": "incidence",
+    "seconds": 68.15,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:23"
+  },
+  {
+    "stage": "simulate",
+    "seconds": 0.37,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:23"
+  },
+  {
+    "stage": "structure",
+    "seconds": 16.53,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:40"
+  },
+  {
+    "stage": "criteria",
+    "seconds": 0.02,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:40"
+  },
+  {
+    "stage": "threshold_sensitivity",
+    "seconds": 0.14,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:40"
+  },
+  {
+    "stage": "report",
+    "seconds": 0.58,
+    "status": "ok",
+    "finished_at": "2026-10-03T13:19:41"
+  }
+]

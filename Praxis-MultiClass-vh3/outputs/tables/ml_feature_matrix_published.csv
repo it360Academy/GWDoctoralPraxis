@@ -1,0 +1,16 @@
+disease,category,incidence_thousands,harm_thousands,harm_rank,harm_uncertainty_width,cat_cancer,cat_infection,cat_vascular
+stroke,vascular,952,93.296,1.0,75.48409528987938,False,False,True
+vte,vascular,320,34.88,4.0,10.470784290144277,False,False,True
+arterial_te,vascular,173,21.971,6.0,8.221414007666525,False,False,True
+aortic_aneurysm,vascular,96,21.216,7.0,14.506383816950917,False,False,True
+mi,vascular,1242,9.936,9.0,6.721110194852107,False,False,True
+sepsis,infection,1345,79.35499999999999,2.0,110.76836982620316,False,True,False
+pneumonia,infection,1469,67.574,3.0,67.16193541934325,False,True,False
+meningitis_encephalitis,infection,47,6.909,11.0,2.3001279181143595,False,True,False
+spinal_abscess,infection,14,5.138,12.0,1.163362024537376,False,True,False
+endocarditis,infection,34,4.692,13.0,1.2993249065013481,False,True,False
+lung_cancer,cancer,224,31.807999999999996,5.0,29.584669129195266,True,False,False
+breast_cancer,cancer,235,10.575,8.0,17.82076935911149,True,False,False
+colorectal_cancer,cancer,137,7.672000000000001,10.0,25.982632289536518,True,False,False
+melanoma,cancer,76,4.332,14.0,4.588829383537753,True,False,False
+prostate_cancer,cancer,233,3.029,15.0,12.13305892420658,True,False,False

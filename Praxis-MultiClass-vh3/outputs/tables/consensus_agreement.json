@@ -1,0 +1,18 @@
+{
+  "observed_ari": 0.29357798165137616,
+  "observed_nmi": 0.6195647594668341,
+  "p_value_ari": 0.014498550144985502,
+  "p_value_nmi": 0.0110988901109889,
+  "null_ari_mean": -0.00034495412844036714,
+  "null_nmi_mean": 0.40340449244264465,
+  "n_permutations": 10000,
+  "ari_10_independent": 0.15413533834586465,
+  "k": 5,
+  "n_draws": 1000,
+  "method": "ward",
+  "per_draw_ari_median": 0.19540229885057472,
+  "per_draw_ari_p2_5": 0.029441971927422116,
+  "per_draw_ari_p97_5": 0.46742615710374685,
+  "n_same_tier": 8,
+  "n_same_tier_10_independent": 5
+}

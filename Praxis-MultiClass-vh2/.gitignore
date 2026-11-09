@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+data/synthetic/
+data/smoke/
+data/*.parquet
+outputs/
+outputs_smoke/
+logs/*.log
+ontology/*_SEED.csv
+ontology/excludes1_pairs_v*.csv
+!ontology/SOURCE.md

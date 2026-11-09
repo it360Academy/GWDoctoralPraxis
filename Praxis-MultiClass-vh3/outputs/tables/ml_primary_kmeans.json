@@ -1,0 +1,10 @@
+{
+  "observed_ari": 0.7304928131416838,
+  "observed_nmi": 0.7958494039297702,
+  "p_value_ari": 9.999000099990002e-05,
+  "p_value_nmi": 9.999000099990002e-05,
+  "null_ari_mean": -0.0002920944558521543,
+  "null_nmi_mean": 0.2864415529684551,
+  "n_permutations": 10000,
+  "verdict": "strong agreement"
+}

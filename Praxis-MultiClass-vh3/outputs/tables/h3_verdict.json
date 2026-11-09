@@ -1,0 +1,89 @@
+{
+  "criterion_1": {
+    "share_diseases_within_threshold": 0.5,
+    "threshold": 0.25,
+    "min_share": 0.5,
+    "met": true
+  },
+  "criterion_2": {
+    "spearman_r": 0.7818181818181817,
+    "threshold": 0.7,
+    "met": true
+  },
+  "criterion_3": {
+    "abs_diff_pp": 5.230730727676103,
+    "threshold_pp": 5.0,
+    "met": false
+  },
+  "criterion_4": {
+    "abs_diff_pp": 3.8396562436096127,
+    "threshold_pp": 5.0,
+    "met": true
+  },
+  "criterion_5": {
+    "per_category": [
+      {
+        "category": "vascular",
+        "published_share": 0.2839290843225142,
+        "share_median": 0.2221118939122336,
+        "share_p2_5": 0.17828300852804202,
+        "share_p97_5": 0.27692315830003494,
+        "diff_pp": -6.1817190410280585,
+        "published_in_interval": false
+      },
+      {
+        "category": "infection",
+        "published_share": 0.34227567403414855,
+        "share_median": 0.3919630711988337,
+        "share_p2_5": 0.3124446295393476,
+        "share_p97_5": 0.4579287940588648,
+        "diff_pp": 4.968739716468518,
+        "published_in_interval": true
+      },
+      {
+        "category": "cancer",
+        "published_share": 0.13179524164333734,
+        "share_median": 0.1430059318910757,
+        "share_p2_5": 0.10861556503559466,
+        "share_p97_5": 0.1859654886844581,
+        "diff_pp": 1.1210690247738353,
+        "published_in_interval": true
+      }
+    ],
+    "note": "descriptive; category-share stability is reported, not scored against a pass/fail threshold; the published comparison share is a point-estimate reconstruction from Table 1 inputs, not a share the paper reports."
+  },
+  "criterion_6": {
+    "relative_difference": 0.2389229284850032,
+    "threshold": 0.2,
+    "met": false
+  },
+  "criterion_7": {
+    "big3_errors_thousands": {
+      "has_overlap": true,
+      "overlap_fraction": 0.4153528447057612
+    },
+    "big3_harms_thousands": {
+      "has_overlap": true,
+      "overlap_fraction": 0.37654954855008643
+    },
+    "grand_total_errors_thousands": {
+      "has_overlap": true,
+      "overlap_fraction": 0.41585813480715184
+    },
+    "grand_total_harms_thousands": {
+      "has_overlap": true,
+      "overlap_fraction": 0.3746842735240923
+    },
+    "met": true
+  },
+  "criterion_8": {
+    "reduction_pct_abs_diff": 0.06488572426031464,
+    "threshold": 0.15,
+    "met": true
+  },
+  "n_scored_criteria_met": 5,
+  "n_scored_criteria_total": 7,
+  "min_criteria_required": 5,
+  "H3_SUPPORTED": true,
+  "note": "All thresholds in criteria_thresholds are unverified placeholders pending literature-derived or committee-approved benchmarks; this verdict is only as trustworthy as those thresholds. Per the prespecified design, no single criterion (including top-15 concentration) determines replication in isolation."
+}

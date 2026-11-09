@@ -1,0 +1,74 @@
+# Smoke-test config: runs the full pipeline against synthetic ICD-10-shaped
+# data (scripts/generate_synthetic_smoke_data.py). Verifies the CODE works
+# end-to-end. Never treat smoke-run numbers as H1 evidence.
+
+random_seed: 42
+
+paths:
+  nis_root: "data/synthetic"
+  data_dir: "data/smoke"
+  logs_dir: "logs"
+  outputs_dir: "outputs_smoke"
+  files:
+    "2021": { core: "NIS_2021_Core.csv" }
+    "2022": { core: "NIS_2022_Core.csv" }
+    "2023": { core: "NIS_2023_Core.csv" }
+
+years:
+  train: "2021"
+  validation: "2022"
+  test: "2023"
+
+ingestion:
+  chunksize: 50000
+  dx_regex: "^I10_DX([0-9]+)$"
+  max_secondary_dx: 25
+  key_candidates: ["KEY_NIS", "KEY"]
+  hosp_candidates: ["HOSP_NIS"]
+  weight_candidates: ["DISCWT"]
+
+features:
+  representation: "icd10_category3"
+  min_category_frequency: 5
+  include_demographic_covariates: true
+  demographic_cols: ["AGE", "FEMALE"]
+  admission_cols: ["ELECTIVE", "AWEEKEND", "PAY1"]
+
+leakage:
+  mode: "strict_phenotype_mask"
+
+models:
+  algorithms: ["logistic_regression", "random_forest", "lightgbm", "xgboost"]
+  xgboost_gpu: false
+  class_weight: "balanced"
+
+tuning:
+  enabled: false
+  n_iter: 5
+  cv_folds: 3
+
+evaluation:
+  bootstrap_resamples: 100
+  bootstrap_ci: 0.95
+
+negative_control:
+  n_permutations: 20
+
+h1_criteria:
+  per_class:
+    auroc_ovr_min: 0.70
+    ppv_lift_min: 2.0
+    low_prevalence_threshold: 0.01
+  aggregate:
+    macro_auroc_ovr_min: 0.70
+    macro_mcc_min: 0.30
+    balanced_accuracy_min: 0.30
+  require_full_phenotype_coverage: true
+
+checkpointing:
+  overwrite: true
+
+parallel:
+  disease_workers: 1
+
+validation_min_rows: 500

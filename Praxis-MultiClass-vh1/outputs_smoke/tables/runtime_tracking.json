@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "inspect",
+    "seconds": 0.02,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:40:50"
+  },
+  {
+    "stage": "ingest",
+    "seconds": 0.59,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:40:50"
+  },
+  {
+    "stage": "validate",
+    "seconds": 0.06,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:40:50"
+  },
+  {
+    "stage": "leakage_audit",
+    "seconds": 0.12,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:40:50"
+  },
+  {
+    "stage": "model",
+    "seconds": 125.19,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:42:56"
+  },
+  {
+    "stage": "report",
+    "seconds": 0.57,
+    "status": "ok",
+    "finished_at": "2026-08-30T00:42:56"
+  }
+]

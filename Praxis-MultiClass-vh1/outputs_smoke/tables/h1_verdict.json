@@ -1,0 +1,28 @@
+{
+  "macro_auroc_ovr": 0.5893416612701312,
+  "macro_auroc_ovr_ci": [
+    0.5893416612701312,
+    0.5824938866331688,
+    0.5963087365750279
+  ],
+  "macro_mcc": 0.028954855754290333,
+  "macro_mcc_ci": [
+    0.028954855754290333,
+    0.02181417334614855,
+    0.034481496201293496
+  ],
+  "balanced_accuracy": 0.09335047844806585,
+  "balanced_accuracy_ci": [
+    0.09335047844806585,
+    0.08601692136625966,
+    0.10101236706864762
+  ],
+  "clears_macro_auroc_floor": false,
+  "clears_macro_mcc_floor": false,
+  "clears_balanced_accuracy_floor": false,
+  "full_phenotype_coverage": true,
+  "n_phenotypes_supported": 0,
+  "n_phenotypes_total": 15,
+  "H1_SUPPORTED": false,
+  "note": "All numeric floors in h1_criteria are unverified placeholders (README limitations) until replaced with literature-derived benchmarks; this verdict is only as trustworthy as those floors."
+}

@@ -1,0 +1,115 @@
+{
+  "criterion_2": {
+    "spearman_r": 0.7818181818181817,
+    "p_value": 0.00754700778106788,
+    "kendall_tau": 0.6888888888888888,
+    "kendall_p_value": 0.00468694885361552,
+    "n_diseases": 10,
+    "diseases": "10 NIS-derived (cancers excluded: identical by design)",
+    "top5_overlap_all15": 5,
+    "max_abs_rank_change_10": 5
+  },
+  "criterion_3_4": {
+    "top5_published": 0.387,
+    "top5_rederived": 0.43930730727676104,
+    "top5_rederived_p2_5": 0.3669146221273519,
+    "top5_rederived_p97_5": 0.4995216201353921,
+    "top5_abs_diff_pp": 5.230730727676103,
+    "top5_published_in_interval": true,
+    "top15_published": 0.507,
+    "top15_rederived": 0.5453965624360961,
+    "top15_rederived_p2_5": 0.4881278873432566,
+    "top15_rederived_p97_5": 0.5958837569920722,
+    "top15_abs_diff_pp": 3.8396562436096127,
+    "top15_published_in_interval": true,
+    "top5_fixed_published_set_rederived": 0.43730005403661
+  },
+  "criterion_6": {
+    "published_median": 795,
+    "published_range": [
+      598,
+      1023
+    ],
+    "rederived_median": 984.9437281455776,
+    "rederived_range": [
+      801.5596595045729,
+      1189.0051639282065
+    ],
+    "relative_difference": 0.2389229284850032,
+    "published_median_in_rederived_range": false
+  },
+  "criterion_7": {
+    "big3_errors_thousands": {
+      "my_interval": [
+        1426.640061177279,
+        2235.1738826786172
+      ],
+      "published_interval": [
+        1122,
+        1889
+      ],
+      "has_overlap": true,
+      "overlap_fraction": 0.4153528447057612,
+      "published_point_in_my_interval": true,
+      "my_point_in_published_interval": true
+    },
+    "big3_harms_thousands": {
+      "my_interval": [
+        607.5822219044663,
+        901.2659142575807
+      ],
+      "published_interval": [
+        454,
+        776
+      ],
+      "has_overlap": true,
+      "overlap_fraction": 0.37654954855008643,
+      "published_point_in_my_interval": false,
+      "my_point_in_published_interval": true
+    },
+    "grand_total_errors_thousands": {
+      "my_interval": [
+        2438.7009592774,
+        3820.8100558608844
+      ],
+      "published_interval": [
+        1918,
+        3230
+      ],
+      "has_overlap": true,
+      "overlap_fraction": 0.41585813480715184,
+      "published_point_in_my_interval": true,
+      "my_point_in_published_interval": true
+    },
+    "grand_total_harms_thousands": {
+      "my_interval": [
+        801.5596595045729,
+        1189.0051639282065
+      ],
+      "published_interval": [
+        598,
+        1023
+      ],
+      "has_overlap": true,
+      "overlap_fraction": 0.3746842735240923,
+      "published_point_in_my_interval": false,
+      "my_point_in_published_interval": true
+    }
+  },
+  "criterion_8": {
+    "published_primary": 795,
+    "published_dx1_only": 549,
+    "published_reduction_pct": 0.30943396226415093,
+    "rederived_primary": 984.9437281455776,
+    "rederived_dx1_only": 744.077474894647,
+    "rederived_dx1_only_range": [
+      598.7641619322592,
+      909.5116141139958
+    ],
+    "rederived_reduction_pct": 0.2445482380038363,
+    "reduction_pct_abs_diff": 0.06488572426031464,
+    "dx1_only_relative_difference": 0.35533237685728053,
+    "dx1_only_scale_other_vascular": 0.6898036850451825,
+    "dx1_only_scale_other_infection": 0.6533864433382556
+  }
+}

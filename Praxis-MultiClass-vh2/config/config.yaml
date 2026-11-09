@@ -1,0 +1,118 @@
+# H2-DEV pipeline configuration - REAL RUN (NIS 2021-2023).
+#
+# H2: Diagnostic Exclusivity Violations (DEVs) - discharges whose principal
+# diagnosis (I10_DX1) co-occurs with an Excludes1-incompatible secondary
+# diagnosis (I10_DX2-DX25) - are rare (well below the rate expected if the
+# rule were ignored), with a stable rate across each NIS year 2021-2023.
+#
+# RQ2: Are diagnosis pairs that shouldn't be coded together under the
+# Excludes1 rule rare enough - below the rate expected by chance - in U.S.
+# hospital discharge records every year from 2021 to 2023, and does that low
+# rate hold steady year after year?
+#
+# No investigator-set cutoff: "rare" is measured against a data-derived
+# baseline - the chance null in negative_controls below. The artifact null
+# is computed and reported as a secondary analysis only (removed from the
+# decision rule post-hoc). See src/reporting/h2_criteria.py.
+#
+# H2 scope decision: DX1 is restricted to the 15 vascular/infectious/
+# oncological phenotypes in src/features/definitions.py (see that file's
+# header for the "researcher verification required" caveat on every
+# code list - these are DRAFT, not a validated published crosswalk).
+
+random_seed: 42
+
+paths:
+  nis_root: "/home/kalayegd/Documents/0NISDatest2123"
+  data_dir: "data"
+  logs_dir: "logs"
+  outputs_dir: "outputs"
+  # NOTE: nis_root/NIS_<year>/NIS_<year>_*.csv are NOT actually CSV despite
+  # the extension - they're raw SPSS .sav binaries (PSPP output from the
+  # HCUP .ASC + .SPS load files in Original/). The genuine, delimited CSVs
+  # PSPP produced live in the sibling _pspp_converted/ folder - use those.
+  files:
+    "2021": { core: "NIS_2021/_pspp_converted/NIS_2021_Core.csv", hospital: "NIS_2021/_pspp_converted/NIS_2021_Hospital.csv" }
+    "2022": { core: "NIS_2022/_pspp_converted/NIS_2022_Core.csv", hospital: "NIS_2022/_pspp_converted/NIS_2022_Hospital.csv" }
+    "2023": { core: "NIS_2023/_pspp_converted/NIS_2023_Core.csv", hospital: "NIS_2023/_pspp_converted/NIS_2023_Hospital.csv" }
+
+
+# Independent per-year analysis (2021 development / 2022 temporal
+# validation / 2023 independent replication) - NEVER randomly pooled for
+# the primary analysis. "years" just lists which NIS years exist; each
+# stage processes them independently unless explicitly comparing.
+years: ["2021", "2022", "2023"]
+ml_years: { development: "2021", validation: "2022", replication: "2023" }
+
+ingestion:
+  chunksize: 200000
+  dx_regex: "^I10_DX([0-9]+)$"
+  max_secondary_dx: 25
+  key_candidates: ["KEY_NIS", "KEY"]
+  hosp_candidates: ["HOSP_NIS"]
+  weight_candidates: ["DISCWT"]
+
+ontology:
+  # NIS calendar year -> ICD-10-CM fiscal year used for that year's
+  # Excludes1 ontology (Oct-Dec discharges technically span two fiscal
+  # years; see ontology/SOURCE.md for the documented misalignment this
+  # implies and why it is accepted rather than resolved discharge-by-discharge).
+  nis_year_to_fy_mapping: { "2021": "2021", "2022": "2022", "2023": "2023" }
+  pairs_csv_template: "ontology/excludes1_pairs_v{fy}.csv"
+  # Must be false for a real run. True only permits the sepsis-only
+  # SEED/partial ontology used for smoke-testing (see config_smoke.yaml);
+  # main.py's stage_ontology_check refuses to proceed against a SEED file
+  # unless this is explicitly set true.
+  allow_seed_ontology: false
+
+negative_controls:
+  chance:
+    n_permutations: 200
+    n_bootstrap: 200
+    strata_cols: ["AGE", "FEMALE"]
+    age_band_width: 10
+  artifact:
+    # secondary analysis only - does not enter H2_SUPPORTED
+    hospital_shuffle_n_permutations: 200
+  significance_alpha: 0.05
+
+# UNVERIFIED PLACEHOLDERS - see README "Limitations" section. These
+# thresholds are prespecified (fixed before results are examined) but
+# not yet grounded in a published benchmark or committee sign-off.
+# rate_ratio_threshold=1.5 means "year-over-year weighted DEV rate must
+# stay within a 1.5x factor (up or down) to count as temporally stable."
+stability_criteria:
+  rate_ratio_threshold: 1.5
+  pair_rank_correlation_threshold: 0.70
+  pair_rank_top_n: 20
+  aiml_performance_max_abs_diff: 0.10
+
+models:
+  algorithms: ["logistic_regression", "random_forest", "lightgbm", "xgboost"]
+  class_weight: "balanced"
+
+evaluation:
+  bootstrap_resamples: 200
+
+sensitivity:
+  position_cutoffs: [5, 10, 15, 25]
+  coding_intensity_bins: [0, 5, 10, 15, 20, 25, 40]
+
+checkpointing:
+  overwrite: false
+
+parallel:
+  # Upper bound on worker processes (joblib convention: -1 = every CPU
+  # core). Each permutation in negative_controls is fully independent, so
+  # this is a near-linear speedup - the single biggest lever on real-run
+  # time. Each worker holds its own multi-GB copy of the year's
+  # secondary-diagnosis block (~7-8 GB at real-NIS volume), so the value
+  # is additionally capped at run time by available RAM
+  # (src/negative_controls/parallel_utils.py) - the effective count is
+  # logged as "n_jobs: requested=... using N".
+  n_jobs: -1
+
+explainability:
+  use_shap: true
+
+validation_min_rows: 100000

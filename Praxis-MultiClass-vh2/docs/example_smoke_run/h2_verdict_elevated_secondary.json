@@ -1,0 +1,51 @@
+{
+  "years_evaluated": [
+    "2021",
+    "2022",
+    "2023"
+  ],
+  "per_year": {
+    "2021": {
+      "distinguishable_from_chance_null": true,
+      "chance_p_value_one_sided": 0.03225806451612903,
+      "chance_p_value_two_sided": 0.0,
+      "chance_rate_ratio": 56.516877130622774,
+      "chance_rate_ratio_ci_lo": 9.127766815298296,
+      "chance_rate_ratio_ci_hi": 67.58064332722482,
+      "chance_direction": "elevated_vs_chance",
+      "distinguishable_from_artifact_null": true,
+      "artifact_p_value": 0.03225806451612903,
+      "year_criteria_1_and_2_met": true
+    },
+    "2022": {
+      "distinguishable_from_chance_null": true,
+      "chance_p_value_one_sided": 0.03225806451612903,
+      "chance_p_value_two_sided": 0.0,
+      "chance_rate_ratio": 20.044829703684506,
+      "chance_rate_ratio_ci_lo": 7.27599979275472,
+      "chance_rate_ratio_ci_hi": 30.50293251973721,
+      "chance_direction": "elevated_vs_chance",
+      "distinguishable_from_artifact_null": true,
+      "artifact_p_value": 0.03225806451612903,
+      "year_criteria_1_and_2_met": true
+    },
+    "2023": {
+      "distinguishable_from_chance_null": true,
+      "chance_p_value_one_sided": 0.03225806451612903,
+      "chance_p_value_two_sided": 0.0,
+      "chance_rate_ratio": 27.796835578873083,
+      "chance_rate_ratio_ci_lo": 6.272007260086112,
+      "chance_rate_ratio_ci_hi": 34.25328636874268,
+      "chance_direction": "elevated_vs_chance",
+      "distinguishable_from_artifact_null": true,
+      "artifact_p_value": 0.03225806451612903,
+      "year_criteria_1_and_2_met": true
+    }
+  },
+  "criterion_1_2_all_years_met": true,
+  "criterion_3_temporal_stability_met": false,
+  "H2_SUPPORTED": false,
+  "H2_SUPPORTED_two_sided_reading": false,
+  "directionality_note": "H2_SUPPORTED uses a ONE-SIDED test (DEV rate must be higher than the chance/artifact nulls). H2_SUPPORTED_two_sided_reading uses a direction-agnostic test (DEV rate merely different from the nulls, in either direction). These can disagree - check per_year[<year>]['chance_direction'] to see whether any disagreement is because rates are elevated or suppressed relative to chance. Suppressed-vs-chance is itself a substantive finding (consistent with coders generally respecting Excludes1 rules) but is a different claim than H2 as originally framed.",
+  "note": "All stability/negative-control thresholds in config.yaml are unverified placeholders pending literature-derived or committee-approved benchmarks - this verdict is only as trustworthy as those thresholds. DEVs are potential diagnostic-inconsistency signals, never confirmed misdiagnoses, regardless of this verdict."
+}

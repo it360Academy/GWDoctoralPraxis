@@ -1,0 +1,16 @@
+{
+  "n_grid_points": 243,
+  "support_rate": 0.5555555555555556,
+  "per_criterion_met_rate": {
+    "criterion_1_met": 0.6666666666666666,
+    "criterion_2_met": 0.6666666666666666,
+    "criterion_3_met": 0.3333333333333333,
+    "criterion_4_met": 0.6666666666666666,
+    "criterion_6_met": 0.3333333333333333,
+    "criterion_7_met": 1.0,
+    "criterion_8_met": 1.0
+  },
+  "min_n_met": 2,
+  "max_n_met": 7,
+  "baseline_note": "baseline (config.yaml placeholder) thresholds are the grid's center point; support_rate is the share of the full grid, not just the baseline, for which H3_SUPPORTED is true"
+}

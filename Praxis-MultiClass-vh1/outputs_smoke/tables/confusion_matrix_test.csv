@@ -1,0 +1,16 @@
+,pred_stroke,pred_vte,pred_arterial_te,pred_aortic_aneurysm,pred_mi,pred_sepsis,pred_pneumonia,pred_meningitis_encephalitis,pred_spinal_abscess,pred_endocarditis,pred_lung_cancer,pred_breast_cancer,pred_colorectal_cancer,pred_melanoma,pred_prostate_cancer
+true_stroke,50,19,31,46,35,15,76,12,34,49,68,36,103,31,41
+true_vte,47,81,49,73,92,29,206,46,71,43,121,59,77,99,39
+true_arterial_te,25,15,29,32,17,4,46,7,27,26,35,14,37,21,13
+true_aortic_aneurysm,37,36,45,70,42,13,125,17,48,35,80,44,54,66,41
+true_mi,12,13,6,8,12,4,29,4,12,2,21,5,7,10,7
+true_sepsis,45,45,32,40,74,35,187,39,79,27,137,54,58,79,41
+true_pneumonia,17,28,10,23,38,14,83,15,40,24,61,14,26,24,16
+true_meningitis_encephalitis,64,69,37,53,93,47,209,43,84,43,129,55,82,72,34
+true_spinal_abscess,29,9,7,22,23,7,59,12,39,10,62,11,19,18,8
+true_endocarditis,24,9,24,22,15,8,38,5,24,15,37,16,33,26,28
+true_lung_cancer,31,19,12,22,35,13,96,20,63,37,109,15,40,22,26
+true_breast_cancer,29,26,46,69,28,12,118,30,46,36,61,45,51,48,53
+true_colorectal_cancer,74,16,51,50,37,10,91,17,54,33,88,50,124,43,37
+true_melanoma,31,25,28,49,34,19,54,16,28,18,58,32,59,49,34
+true_prostate_cancer,8,9,18,31,8,4,39,6,18,14,32,20,22,23,15
